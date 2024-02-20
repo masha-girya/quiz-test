@@ -1,0 +1,14 @@
+@use 'styles/variables.scss' as var;
+
+.cvsDownload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  &__text {
+    font-family: 'AlberSansSemiBold', sans-serif;
+    font-size: 17px;
+    color: var.$color-text-main;
+  }
+}

@@ -1,0 +1,43 @@
+@use 'styles/variables.scss' as var;
+
+.titleBox {
+  &__title {
+    font-size: 28px;
+    font-family: 'NutinoBold';
+    text-align: center;
+
+    color: var.$color-text-main;
+
+    &_main {
+      font-size: 30px;
+      line-height: 38px;
+      font-family: 'NutinoExtraBold';
+    }
+
+    &_thankYou {
+      font-size: 36px;
+      font-family: 'Niconne';
+      font-weight: 400;
+    }
+  }
+
+  &__text {
+    font-family: 'NutinoRegular';
+    font-size: 17px;
+    text-align: center;
+
+    color: var.$color-text-secondary;
+
+    margin-top: 16px;
+
+    &_thankYou {
+      font-size: 17px;
+      font-family: 'AlberSansSemiBold';
+      line-height: 25px;
+
+      color: var.$color-text-main;
+
+      margin-top: 0;
+    }
+  }
+}

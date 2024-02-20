@@ -1,0 +1,26 @@
+@use 'styles/variables.scss' as var;
+
+.loader {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  circle {
+    stroke: var.$color-text-main;
+
+    transition: stroke-dashoffset 0.1s linear;
+
+    &:last-of-type {
+      stroke: var.$color-highlight;
+    }
+  }
+
+  p {
+    position: absolute;
+
+    font-size: 52px;
+    font-family: 'AlberSansExtraBold', sans-serif;
+    color: var.$color-text-main;
+  }
+}

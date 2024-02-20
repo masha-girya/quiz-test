@@ -1,0 +1,38 @@
+.thankYou {
+  height: 100%;
+
+  padding: 61px 26px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__checkmark {
+    width: 118px;
+    height: 118px;
+
+    margin-top: 62px;
+
+    object-fit: cover;
+  }
+
+  &__contentBox {
+    padding-top: 101px;
+    padding-bottom: 29px;
+    align-items: center;
+  }
+
+  &__download {
+    flex: 1;
+
+    display: flex;
+    align-items: flex-end;
+
+    margin-bottom: 30px;
+  }
+
+  &__button {
+    width: 100%;
+  }
+}

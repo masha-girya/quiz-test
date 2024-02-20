@@ -1,0 +1,36 @@
+@use 'styles/variables.scss' as var;
+
+.labelText {
+  padding: 26px 20px;
+
+  font-family: 'AlberSansMedium', sans-serif;
+  font-size: 17px;
+  color: var.$color-text-main;
+
+  &_bubble {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    padding: 8px;
+
+    font-size: 13px;
+    text-align: center;
+  }
+
+  &_icon {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  &__icon {
+    display: block;
+    text-align: center;
+    font-size: 52px;
+
+    &_bubble {
+      font-size: 25px;
+      line-height: 25px;
+    }
+  }
+}

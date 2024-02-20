@@ -1,0 +1,31 @@
+@use 'styles/variables.scss' as var;
+
+.checkmark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 23px;
+  height: 23px;
+
+  border-radius: 8px;
+  border: 1px solid var.$color-highlight;
+  background-color: var.$color-highlight-opacity;
+
+  svg {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &_checked {
+    background-color: var.$color-highlight;
+
+    svg {
+      opacity: 1;
+    }
+  }
+
+  &_bubble {
+    display: none;
+  }
+}

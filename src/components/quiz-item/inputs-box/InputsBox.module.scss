@@ -1,0 +1,24 @@
+.inputsBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__inputList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &_2 {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &_5 {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      width: 120%;
+    }
+  }
+}

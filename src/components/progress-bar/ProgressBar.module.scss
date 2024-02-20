@@ -1,0 +1,64 @@
+@use 'styles/variables.scss' as var;
+
+.progressWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  progress {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__label {
+    margin-bottom: 10px;
+
+    &_value,
+    &_maxValue {
+      font-family: 'AlberSansExtraBold', sans-serif;
+      font-size: 18px;
+    }
+
+    &_slash {
+      font-family: 'AlberSansMedium', sans-serif;
+      color: var.$color-text-main;
+      letter-spacing: 2px;
+    }
+
+    &_value {
+      color: var.$color-highlight;
+      letter-spacing: 3px;
+    }
+
+    &_maxValue {
+      color: var.$color-text-main;
+    }
+  }
+}
+
+.progressContainer {
+  position: relative;
+
+  height: 4px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 50px;
+
+  background-color: var.$color-text-main;
+
+  &__progress {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+
+    background-color: var.$color-highlight;
+
+    transition: transform 0.3s linear;
+  }
+}

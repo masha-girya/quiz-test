@@ -1,0 +1,27 @@
+@use 'styles/variables.scss' as var;
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    font-family: 'AlberSansSemiBold';
+    font-size: 17px;
+    text-align: center;
+
+    color: var.$color-text-main;
+
+    max-width: 213px;
+  }
+}

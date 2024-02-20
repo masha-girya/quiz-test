@@ -1,0 +1,21 @@
+@use 'styles/variables.scss' as var;
+
+.button {
+  width: 100%;
+
+  padding: 16px;
+
+  background-color: var.$color-highlight;
+
+  border-radius: 30px;
+
+  font-family: 'NutinoExtraBold', sans-serif;
+  font-size: 17px;
+  color: var.$color-text-main;
+
+  transition: opacity 0.3s ease;
+
+  &:disabled {
+    opacity: 0.4;
+  }
+}

@@ -1,0 +1,36 @@
+@use 'styles/variables.scss' as var;
+
+.emailScreen {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+
+  height: 100%;
+
+  padding: 45px 26px 20px;
+}
+
+.privacyPolicy {
+  font-family: 'AlberSansMedium';
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+
+  color: var.$color-text-secondary;
+
+  max-width: 280px;
+
+  margin: 0 auto;
+
+  &__link {
+    color: var.$color-highlight;
+  }
+}
+
+.form {
+  padding-top: 72px;
+
+  &__content {
+    gap: 56px;
+  }
+}

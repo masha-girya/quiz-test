@@ -1,0 +1,11 @@
+.header {
+  position: relative;
+
+  padding: 15px 20px 0;
+  min-height: 50px;
+
+  &__backBtn {
+    position: absolute;
+    top: 13px;
+  }
+}
