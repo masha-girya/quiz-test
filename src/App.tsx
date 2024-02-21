@@ -33,29 +33,25 @@ function App() {
       onAnimationEnd={handleAnimationEnd}
     >
       <I18nextProvider i18n={i18n}>
-        <main className={styles.app__main}>
-          <form method="post" className={styles.app__form}>
-            <Routes location={displayLocation.current}>
-              <Route path="/" element={<LangRouter />}>
-                <Route path={ROUTES.quiz} element={<Quiz />}>
-                  <Route path=":slug" element={<Quiz />} />
-                </Route>
-                <Route path={ROUTES.email} element={<Email />} />
-                <Route path={ROUTES.loading} element={<Loading />} />
-                <Route path={ROUTES.thankYou} element={<ThankYou />} />
-              </Route>
+        <Routes location={displayLocation.current}>
+          <Route path="/" element={<LangRouter />}>
+            <Route path={ROUTES.quiz} element={<Quiz />}>
+              <Route path=":slug" element={<Quiz />} />
+            </Route>
+            <Route path={ROUTES.email} element={<Email />} />
+            <Route path={ROUTES.loading} element={<Loading />} />
+            <Route path={ROUTES.thankYou} element={<ThankYou />} />
+          </Route>
 
-              <Route path="/:lang" element={<LangRouter />}>
-                <Route path={ROUTES.quiz} element={<Quiz />}>
-                  <Route path=":slug" element={<Quiz />} />
-                </Route>
-                <Route path={ROUTES.email} element={<Email />} />
-                <Route path={ROUTES.loading} element={<Loading />} />
-                <Route path={ROUTES.thankYou} element={<ThankYou />} />
-              </Route>
-            </Routes>
-          </form>
-        </main>
+          <Route path="/:lang" element={<LangRouter />}>
+            <Route path={ROUTES.quiz} element={<Quiz />}>
+              <Route path=":slug" element={<Quiz />} />
+            </Route>
+            <Route path={ROUTES.email} element={<Email />} />
+            <Route path={ROUTES.loading} element={<Loading />} />
+            <Route path={ROUTES.thankYou} element={<ThankYou />} />
+          </Route>
+        </Routes>
       </I18nextProvider>
     </div>
   );

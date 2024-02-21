@@ -19,7 +19,7 @@ export const QuizVariantsBox = (props: IProps) => {
   const { variants, slug, lang, title } = props;
 
   const { handleNavigate, handleNavigateWrapper } = useQuizNavigate();
-  const { setLocalItem, getLocalItem } = useLocalStorage();
+  const { setLocalItem, getLocalItem, removeLocalItem } = useLocalStorage();
   const { t } = useTranslation();
 
   const [checkedItem, setCheckedItem] = useState<string[]>([]);
@@ -36,6 +36,10 @@ export const QuizVariantsBox = (props: IProps) => {
 
     const locale =
       slug === ROUTES.quizLang ? getLocaleLang(variants, item) : lang;
+
+    if (slug.includes(ROUTES.quizLang)) {
+      removeLocalItem();
+    }
 
     setLocalItem({
       title,

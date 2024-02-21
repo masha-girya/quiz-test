@@ -1,5 +1,20 @@
-.container {
+@use 'styles/mixins.scss';
+
+.main {
   padding: 45px 26px 20px;
   height: calc(100% - 50px);
   max-height: calc(100% - 50px);
+
+  @include mixins.mediaDesktop {
+    position: relative;
+    z-index: 1;
+
+    padding: 45px 10% 20px 12%;
+    height: 100%;
+    max-height: 100%;
+  }
+}
+
+form {
+  height: 100%;
 }
