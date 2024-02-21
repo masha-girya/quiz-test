@@ -16,9 +16,11 @@ export const LangRouter = () => {
   return (
     <>
       <Header />
-      <div className={styles.container}>
-        <Outlet />
-      </div>
+      <main className={styles.main}>
+        <form className={styles.form}>
+          <Outlet />
+        </form>
+      </main>
     </>
   );
 };

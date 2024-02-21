@@ -11,12 +11,10 @@ export const ProgressBar = (props: IProps) => {
   return (
     <div className={styles.progressWrapper}>
       <label htmlFor="quiz-number" className={styles.progressWrapper__label}>
-        <span
-          className={styles.progressWrapper__label_value}
-        >{`${value + 1}`}</span>
-        <span
-          className={styles.progressWrapper__label_slash}
-        >/</span>
+        <span className={styles.progressWrapper__label_value}>{`${
+          value + 1
+        }`}</span>
+        <span className={styles.progressWrapper__label_slash}>/</span>
         <span
           className={styles.progressWrapper__label_maxValue}
         >{`${maxValue}`}</span>
@@ -27,8 +25,12 @@ export const ProgressBar = (props: IProps) => {
         <div
           className={styles.progressContainer__progress}
           style={{
-            width: `${(value * 100) / maxValue}%`,
-            minWidth: `${100 / maxValue}%`,
+            [window.innerWidth < 800 ? 'width' : 'height']: `${
+              (value * 100) / maxValue
+            }%`,
+            [window.innerWidth < 800 ? 'minWidth' : 'minHeight']: `${
+              100 / maxValue
+            }%`,
           }}
         ></div>
       </div>

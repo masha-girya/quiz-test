@@ -10,7 +10,6 @@ export const DE_LOCALE: ILocaleData = {
   [ROUTES.quizLang]: {
     title: 'Was ist Ihre bevorzugte Sprache?',
     desc: 'Sprache wählen',
-    // variants: ['Englisch', 'Französisch', 'Deutsch', 'Spanisch'],
     variants: [
       { text: 'Englisch', route: LOCALE_ROUTES.en },
       { text: 'Französisch', route: LOCALE_ROUTES.fr },

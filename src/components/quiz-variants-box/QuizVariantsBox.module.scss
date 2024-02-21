@@ -1,3 +1,5 @@
+@use 'styles/mixins.scss';
+
 .inputsBox {
   display: flex;
   flex-direction: column;
@@ -21,6 +23,11 @@
       gap: 8px;
 
       width: 120%;
+
+      @include mixins.mediaDesktop {
+        width: 100%;
+        justify-content: center;
+      }
     }
   }
 }

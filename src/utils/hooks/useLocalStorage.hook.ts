@@ -6,26 +6,33 @@ export const useLocalStorage = (key = LOCAL_DATA_KEYS.quizData) => {
     return JSON.parse(localStorage.getItem(key) || '[]');
   }, [localStorage, key]);
 
-  const setLocalItem = (data: ILocalStorage) => {
-    const localItem = getLocalItem();
+  const setLocalItem = useCallback(
+    (data: ILocalStorage) => {
+      const localItem = getLocalItem();
 
-    const isDataInKey = localItem.find(
-      (item: ILocalStorage) => item.title === data.title,
-    );
+      const isDataInKey = localItem.find(
+        (item: ILocalStorage) => item.title === data.title,
+      );
 
-    const newData = isDataInKey
-      ? localItem.map((item: ILocalStorage) =>
-          item.title === data.title
-            ? {
-                ...item,
-                answer: data.answer,
-              }
-            : item,
-        )
-      : [...localItem, data];
+      const newData = isDataInKey
+        ? localItem.map((item: ILocalStorage) =>
+            item.title === data.title
+              ? {
+                  ...item,
+                  answer: data.answer,
+                }
+              : item,
+          )
+        : [...localItem, data];
 
-    localStorage.setItem(key, JSON.stringify(newData));
-  };
+      localStorage.setItem(key, JSON.stringify(newData));
+    },
+    [localStorage, getLocalItem, key],
+  );
 
-  return { setLocalItem, getLocalItem };
+  const removeLocalItem = useCallback(() => {
+    localStorage.removeItem(key);
+  }, [key]);
+
+  return { setLocalItem, getLocalItem, removeLocalItem };
 };
