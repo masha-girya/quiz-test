@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Loader } from 'components';
-import { useQuizNavigate } from 'hooks';
+import { useQuizNavigate } from 'utils/hooks';
 import { ROUTES } from 'types';
 import styles from './Loading.module.scss';
 

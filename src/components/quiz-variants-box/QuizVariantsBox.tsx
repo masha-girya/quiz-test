@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import classNames from 'classnames';
 import { Input } from 'components';
 import { ILocalStorage, INPUT_TYPE, ROUTES } from 'types';
-import { useLocalStorage, useQuizNavigate } from 'hooks';
+import { useLocalStorage, useQuizNavigate } from 'utils/hooks';
 import { QUIZ_TYPE } from 'app-constants';
-import styles from './InputsBox.module.scss';
+import styles from './QuizVariantsBox.module.scss';
 
 interface IProps {
   title: string;
@@ -13,7 +13,7 @@ interface IProps {
   lang: string | undefined;
 }
 
-export const InputsBox = (props: IProps) => {
+export const QuizVariantsBox = (props: IProps) => {
   const { variants, slug, lang, title } = props;
   const { handleNavigate } = useQuizNavigate();
   const { setLocalItem, getLocalItem } = useLocalStorage();

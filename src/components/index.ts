@@ -6,6 +6,5 @@ export * from './icons';
 export * from './input';
 export * from './loader';
 export * from './progress-bar';
-export * from './quiz-item';
-export * from './lang-router';
+export * from './quiz-variants-box';
 export * from './title-box';

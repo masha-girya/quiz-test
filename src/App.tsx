@@ -1,12 +1,11 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
-import i18n from 'localization/i18n';
-import { Header, LangRouter } from 'components';
-import { Email, Quiz, ThankYou, Loading } from 'screens';
+import classNames from 'classnames';
+import { LangRouter, Email, Quiz, ThankYou, Loading } from 'screens';
+import i18n from 'utils/localization/i18n';
 import { ROUTES, ROUTES_ANIMATION } from 'types';
 import styles from './App.module.scss';
-import classNames from 'classnames';
 
 function App() {
   const location = useLocation();
@@ -33,8 +32,6 @@ function App() {
       className={classNames(styles.app, styles[`app_${transitionStage}`])}
       onAnimationEnd={handleAnimationEnd}
     >
-      <Header />
-
       <I18nextProvider i18n={i18n}>
         <main className={styles.app__main}>
           <form method="post" className={styles.app__form}>

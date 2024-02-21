@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import i18n from 'localization/i18n';
+import i18n from 'utils/localization/i18n';
 import { ROUTES } from 'types';
 import { FALLBACK_LANG } from 'app-constants';
 

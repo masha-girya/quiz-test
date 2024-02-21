@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { EmailInput } from './email-input';
 import { TitleBox } from 'components';
-import { useLocaleData } from 'hooks';
+import { useLocaleData } from 'utils/hooks';
 import { ROUTES } from 'types';
 import styles from './Email.module.scss';
 

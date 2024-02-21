@@ -1,6 +1,6 @@
 import { Button, CvsDownload, TitleBox } from 'components';
 import { useTranslation } from 'react-i18next';
-import { useLocaleData, useQuizNavigate } from 'hooks';
+import { useLocaleData, useQuizNavigate } from 'utils/hooks';
 import { LOCAL_DATA_KEYS, ROUTES } from 'types';
 import CheckmarkImg from './assets/checkmark.png';
 import styles from './ThankYou.module.scss';
