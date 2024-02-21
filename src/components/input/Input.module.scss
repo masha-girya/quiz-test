@@ -40,7 +40,8 @@
       background-color: var.$color-highlight-opacity;
     }
 
-    &_text:focus-within, &_email:focus-within {
+    &_text:focus-within,
+    &_email:focus-within {
       border-color: var.$color-highlight;
 
       background-color: var.$color-input-text-focus;
@@ -74,7 +75,7 @@
   }
 
   &__input {
-    font-family: 'AlberSansMedium', sans-serif;
+    font-family: 'AlbertSansMedium', sans-serif;
     font-size: 17px;
     color: var.$color-text-main;
     outline: none;
@@ -93,7 +94,8 @@
       user-select: none;
     }
 
-    &_text, &_email {
+    &_text,
+    &_email {
       padding: 26px 20px;
 
       width: 100%;
@@ -111,7 +113,7 @@
     left: 20px;
     bottom: -20px;
 
-    font-family: 'AlberSansMedium', sans-serif;
+    font-family: 'AlbertSansMedium', sans-serif;
     font-size: 14px;
     color: var.$color-error;
   }
