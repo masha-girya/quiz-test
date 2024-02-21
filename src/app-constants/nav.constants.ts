@@ -21,11 +21,18 @@ export const NEXT_ROUTES = {
   [ROUTES.thankYou]: `${ROUTES.quiz}/${ROUTES.quizLang}`,
 };
 
+export enum LANG {
+  en = "en",
+  fr = "fr",
+  de = "de",
+  es = "es",
+}
+
 export const LOCALE_ROUTES = {
-  en: 'en',
-  fr: 'fr',
-  de: 'de',
-  es: 'es',
+  en: LANG.en,
+  fr: LANG.fr,
+  de: LANG.de,
+  es: LANG.es,
 }
 
 export const FALLBACK_LANG = 'en';

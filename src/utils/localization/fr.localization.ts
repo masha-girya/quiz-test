@@ -1,11 +1,12 @@
 import { LOCALE_ROUTES } from 'app-constants';
-import { ROUTES } from 'types';
+import { ILocaleData, ROUTES } from 'types';
 
-export const FR_LOCALE = {
+export const FR_LOCALE: ILocaleData = {
   button: {
     next: 'Suivant',
     retakeQuiz: 'Reprendre le quiz',
   },
+  hate: 'détestes',
   [ROUTES.quizLang]: {
     title: 'Quelle est votre langue préférée?',
     desc: 'Hoisissez la langue',

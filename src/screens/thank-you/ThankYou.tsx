@@ -23,7 +23,7 @@ export const ThankYou = () => {
     <>
       {localeData && (
         <div className={styles.thankYou}>
-          <TitleBox title={localeData.title} text={localeData.desc} />
+          <TitleBox title={localeData.title} desc={localeData.desc} />
 
           <img src={CheckmarkImg} className={styles.thankYou__checkmark} />
           <div className={styles.thankYou__download}>

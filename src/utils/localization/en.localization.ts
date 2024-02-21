@@ -1,20 +1,21 @@
-import { LOCALE_ROUTES } from 'app-constants';
-import { ROUTES } from 'types';
+import { LANG } from 'app-constants';
+import { ILocaleData, ROUTES } from 'types';
 
-export const EN_LOCALE = {
+export const EN_LOCALE: ILocaleData = {
   button: {
     next: 'Next',
     retakeQuiz: 'Retake quiz',
   },
+  hate: 'hate',
   [ROUTES.quizLang]: {
     title: 'What is your preferred language?',
     desc: 'Choose language',
     // variants: ['English', 'French', 'German', 'Spanish'],
     variants: [
-      { text: 'English', route: LOCALE_ROUTES.en },
-      { text: 'French', route: LOCALE_ROUTES.fr },
-      { text: 'German', route: LOCALE_ROUTES.de },
-      { text: 'Spanish', route: LOCALE_ROUTES.es },
+      { text: 'English', route: LANG.en },
+      { text: 'French', route: LANG.fr },
+      { text: 'German', route: LANG.de },
+      { text: 'Spanish', route: LANG.es },
     ],
   },
   [ROUTES.quizGender]: {

@@ -1,22 +1,26 @@
 import { useEffect, useState } from 'react';
 import classNames from 'classnames';
-import { Input } from 'components';
-import { ILocalStorage, INPUT_TYPE, ROUTES } from 'types';
+import { useTranslation } from 'react-i18next';
+import { Button, Input } from 'components';
 import { useLocalStorage, useQuizNavigate } from 'utils/hooks';
+import { getLocaleLang } from 'utils/helpers';
+import { ILocalStorage, INPUT_TYPE, TVariant, ROUTES } from 'types';
 import { QUIZ_TYPE } from 'app-constants';
 import styles from './QuizVariantsBox.module.scss';
 
 interface IProps {
   title: string;
-  variants: any[];
+  variants: TVariant[];
   slug: string;
   lang: string | undefined;
 }
 
 export const QuizVariantsBox = (props: IProps) => {
   const { variants, slug, lang, title } = props;
-  const { handleNavigate } = useQuizNavigate();
+
+  const { handleNavigate, handleNavigateWrapper } = useQuizNavigate();
   const { setLocalItem, getLocalItem } = useLocalStorage();
+  const { t } = useTranslation();
 
   const [checkedItem, setCheckedItem] = useState<string[]>([]);
 
@@ -31,9 +35,7 @@ export const QuizVariantsBox = (props: IProps) => {
     setCheckedItem([item]);
 
     const locale =
-      slug === ROUTES.quizLang
-        ? variants.find((variant: any) => variant.text === item).route
-        : lang;
+      slug === ROUTES.quizLang ? getLocaleLang(variants, item) : lang;
 
     setLocalItem({
       title,
@@ -82,7 +84,7 @@ export const QuizVariantsBox = (props: IProps) => {
           styles[`inputsBox__inputList_${slug}`],
         )}
       >
-        {variants.map((quizItem: any, index: number) => (
+        {variants.map((quizItem: TVariant, index: number) => (
           <Input
             key={index}
             type={QUIZ_TYPE[slug as keyof typeof QUIZ_TYPE]}
@@ -97,6 +99,15 @@ export const QuizVariantsBox = (props: IProps) => {
           />
         ))}
       </div>
+
+      {QUIZ_TYPE[slug as keyof typeof QUIZ_TYPE] === INPUT_TYPE.checkbox && (
+        <Button
+          type="button"
+          text={t('button.next')}
+          handleClick={handleNavigateWrapper}
+          disabled={checkedItem.length < 2}
+        />
+      )}
     </div>
   );
 };
