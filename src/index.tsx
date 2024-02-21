@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './localization/i18n.ts';
+import './utils/localization/i18n.ts';
 import './index.module.scss';
 import App from './App';
 import { HashRouter } from 'react-router-dom';

@@ -1,10 +1,10 @@
-import { BackButton, ProgressBar } from 'components';
-import styles from './Header.module.scss';
-import i18n from 'localization/i18n';
-import { FALLBACK_LANG } from 'app-constants';
-import { useLocation, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { useLocation, useParams } from 'react-router-dom';
+import { BackButton, ProgressBar } from 'components';
+import i18n from 'utils/localization/i18n';
 import { ROUTES } from 'types';
+import { FALLBACK_LANG } from 'app-constants';
+import styles from './Header.module.scss';
 
 export const Header = () => {
   const { slug } = useParams();

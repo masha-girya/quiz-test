@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { INPUT_TYPE, ROUTES } from 'types';
 import { Button, Input } from 'components';
-import { useLocalStorage, useQuizNavigate } from 'hooks';
-import { emailValidation } from 'helpers';
+import { useLocalStorage, useQuizNavigate } from 'utils/hooks';
+import { emailValidation } from 'utils/helpers';
 import styles from './EmailInput.module.scss';
 
 interface IProps {

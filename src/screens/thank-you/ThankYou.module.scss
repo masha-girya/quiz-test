@@ -1,12 +1,12 @@
 .thankYou {
-  height: 100%;
-
-  padding: 61px 26px 20px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  height: 100%;
+
+  padding-top: 61px;
 
   &__checkmark {
     width: 118px;
