@@ -4,7 +4,7 @@ interface IProps {
   text: string;
   type: 'button' | 'submit' | 'reset';
   disabled: boolean;
-  handleClick: (e: any) => void;
+  handleClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
 export const Button = (props: IProps) => {

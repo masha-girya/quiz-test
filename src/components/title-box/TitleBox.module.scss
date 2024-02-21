@@ -8,6 +8,10 @@
 
     color: var.$color-text-main;
 
+    &_highlight {
+      color: var.$color-highlight;
+    }
+
     &_main {
       font-size: 30px;
       line-height: 38px;

@@ -1,7 +1,9 @@
 .inputsBox {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+
+  height: 100%;
 
   &__inputList {
     display: flex;

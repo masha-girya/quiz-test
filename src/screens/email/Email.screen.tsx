@@ -12,7 +12,7 @@ export const Email = () => {
     <>
       {localeData && (
         <div className={styles.emailScreen}>
-          <TitleBox title={localeData.title} text={localeData.desc} />
+          <TitleBox title={localeData.title} desc={localeData.desc} />
 
           <EmailInput
             placeholder={localeData.placeholder}
